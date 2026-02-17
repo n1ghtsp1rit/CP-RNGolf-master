@@ -79,6 +79,9 @@ class Play extends Phaser.Scene {
         })
         // cup/ball collision
         this.physics.add.collider(this.ball, this.cup, (ball, cup) => {
+
+            cup.setX(Phaser.Math.Between(0, 640/2)) 
+
             
             // Instead of destroying the ball, reset it to its postion and track the score
             this.score++
